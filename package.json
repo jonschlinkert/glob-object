@@ -1,0 +1,64 @@
+{
+  "name": "glob-object",
+  "description": "Filter an object using glob patterns and dot notation.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jonschlinkert/glob-object",
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "repository": "jonschlinkert/glob-object",
+  "bugs": {
+    "url": "https://github.com/jonschlinkert/glob-object/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "get-value": "^1.1.5",
+    "kind-of": "^2.0.1",
+    "lazy-cache": "^0.2.3",
+    "micromatch": "^2.2.0",
+    "set-value": "^0.2.0",
+    "stringify-keys": "^0.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5",
+    "should": "^7.0.4"
+  },
+  "keywords": [
+    "dot",
+    "filter",
+    "get",
+    "glob",
+    "globstar",
+    "key",
+    "keys",
+    "match",
+    "notation",
+    "object",
+    "object-path",
+    "path",
+    "paths",
+    "pattern",
+    "set",
+    "star",
+    "wildcard"
+  ],
+  "verb": {
+    "related": {
+      "list": [
+        "set-value",
+        "get-value",
+        "has-value",
+        "expand-object",
+        "stringify-keys"
+      ]
+    }
+  }
+}
