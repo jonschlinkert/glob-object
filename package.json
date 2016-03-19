@@ -21,16 +21,17 @@
     "test": "mocha"
   },
   "dependencies": {
-    "get-value": "^1.1.5",
-    "kind-of": "^2.0.1",
-    "lazy-cache": "^0.2.3",
-    "micromatch": "^2.2.0",
-    "set-value": "^0.2.0",
-    "stringify-keys": "^0.2.0"
+    "get-value": "^2.0.3",
+    "kind-of": "^3.0.2",
+    "lazy-cache": "^1.0.3",
+    "micromatch": "^2.3.7",
+    "set-value": "^0.3.3",
+    "stringify-keys": "^0.3.0"
   },
   "devDependencies": {
-    "mocha": "^2.2.5",
-    "should": "^7.0.4"
+    "gulp-format-md": "^0.1.7",
+    "mocha": "^2.4.5",
+    "should": "^8.2.2"
   },
   "keywords": [
     "dot",
@@ -52,6 +53,15 @@
     "wildcard"
   ],
   "verb": {
+    "run": true,
+    "toc": false,
+    "layout": "default",
+    "tasks": [
+      "readme"
+    ],
+    "plugins": [
+      "gulp-format-md"
+    ],
     "related": {
       "list": [
         "set-value",
@@ -60,6 +70,12 @@
         "expand-object",
         "stringify-keys"
       ]
+    },
+    "reflinks": [
+      "verb"
+    ],
+    "lint": {
+      "reflinks": true
     }
   }
 }
