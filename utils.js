@@ -4,7 +4,7 @@
  * Expose lazily required module dependecies as `utils` methods
  */
 
-module.exports = function (fn) {
+module.exports = function(fn) {
   var lazy = require('lazy-cache')(fn);
   lazy('stringify-keys', 'stringify');
   lazy('kind-of', 'typeOf');
