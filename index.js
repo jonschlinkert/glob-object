@@ -15,7 +15,7 @@ function globObject(patterns, obj, opts) {
   var matches = utils.mm(paths, patterns, opts);
 
   return matches.map(toDots)
-    .reduce(function (acc, path) {
+    .reduce(function(acc, path) {
       utils.set(acc, path, utils.get(obj, path));
       return acc;
     }, {});

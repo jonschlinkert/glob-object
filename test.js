@@ -7,9 +7,9 @@
 
 'use strict';
 
-/* deps:mocha */
+require('mocha');
+require('should');
 var assert = require('assert');
-var should = require('should');
 var globObject = require('./');
 
 var fixture = {
