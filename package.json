@@ -1,7 +1,7 @@
 {
   "name": "glob-object",
   "description": "Filter an object using glob patterns and dot notation.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/jonschlinkert/glob-object",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "jonschlinkert/glob-object",
