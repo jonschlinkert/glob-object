@@ -1,15 +1,22 @@
 'use strict';
 
+var utils = require('lazy-cache')(require);
+var fn = require;
+require = utils;
+
 /**
- * Expose lazily required module dependecies as `utils` methods
+ * Lazily required module dependencies
  */
 
-module.exports = function(fn) {
-  var lazy = require('lazy-cache')(fn);
-  lazy('stringify-keys', 'stringify');
-  lazy('kind-of', 'typeOf');
-  lazy('get-value', 'get');
-  lazy('set-value', 'set');
-  lazy('micromatch', 'mm');
-  return lazy;
-};
+require('get-value', 'get');
+require('kind-of', 'typeOf');
+require('micromatch', 'mm');
+require('set-value', 'set');
+require('stringify-keys', 'stringify');
+require = fn;
+
+/**
+ * Expose `utils` modules
+ */
+
+module.exports = utils;

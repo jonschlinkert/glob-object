@@ -36,12 +36,10 @@ describe('globObject', function() {
   });
 
   it('should match a nested property using a wildcard:', function() {
-    var res = globObject('a.*.g', fixture);
-    assert.deepEqual(res, {a: {b: {g: 'h'}}});
+    assert.deepEqual(globObject('a.*.g', fixture), {a: {b: {g: 'h'}}});
   });
 
   it('should match deep properties using globstars', function() {
-    var res = globObject('a.**.g', fixture);
-    assert.deepEqual(res, {a: {b: {g: 'h', l: {g: 'k'}}}});
+    assert.deepEqual(globObject('a.**.g', fixture), {a: {b: {g: 'h', l: {g: 'k'}}}});
   });
 });

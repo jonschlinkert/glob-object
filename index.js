@@ -7,18 +7,18 @@
 
 'use strict';
 
-var utils = require('./utils')(require);
+var utils = require('./utils');
 
 function globObject(patterns, obj, opts) {
   patterns = arrayify(patterns).map(toSlashes);
-  var paths = utils.stringify(obj, '/');
-  var matches = utils.mm(paths, patterns, opts);
+  var keys = utils.stringify(obj, '/');
+  var matches = utils.mm(keys, patterns, opts);
 
-  return matches.map(toDots)
-    .reduce(function(acc, path) {
-      utils.set(acc, path, utils.get(obj, path));
-      return acc;
-    }, {});
+  return matches.reduce(function(acc, path) {
+    var key = toDots(path);
+    utils.set(acc, key, utils.get(obj, key));
+    return acc;
+  }, {});
 }
 
 function toSlashes(key) {
@@ -30,7 +30,7 @@ function toDots(key) {
 }
 
 function arrayify(val) {
-  return Array.isArray(val) ? val : [val];
+  return val ? (Array.isArray(val) ? val : [val]) : [];
 }
 
 /**

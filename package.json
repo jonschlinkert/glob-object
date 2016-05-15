@@ -21,10 +21,10 @@
     "test": "mocha"
   },
   "dependencies": {
-    "get-value": "^2.0.3",
-    "kind-of": "^3.0.2",
-    "lazy-cache": "^1.0.3",
-    "micromatch": "^2.3.7",
+    "get-value": "^2.0.5",
+    "kind-of": "^3.0.3",
+    "lazy-cache": "^2.0.1",
+    "micromatch": "^2.3.8",
     "set-value": "^0.3.3",
     "stringify-keys": "^0.3.0"
   },
@@ -64,10 +64,10 @@
     ],
     "related": {
       "list": [
-        "set-value",
+        "expand-object",
         "get-value",
         "has-value",
-        "expand-object",
+        "set-value",
         "stringify-keys"
       ]
     },
