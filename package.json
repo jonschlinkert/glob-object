@@ -24,7 +24,6 @@
     "clone-deep": "^0.3.0",
     "get-value": "^2.0.6",
     "micromatch": "^3.0.3",
-    "path-starts-with": "^1.0.0",
     "set-value": "^1.0.0",
     "stringify-keys": "^0.3.0",
     "unset-value": "^1.0.0"
@@ -73,5 +72,9 @@
     "lint": {
       "reflinks": true
     }
+  },
+  "devDependencies": {
+    "gulp-format-md": "^0.1.12",
+    "mocha": "^3.4.2"
   }
 }
