@@ -32,8 +32,8 @@ describe('glob', function() {
   it('should match properties using negation patterns:', function() {
     assert.deepEqual(glob('!a', fixture), {});
     assert.deepEqual(glob(['!a', 'a.b.c'], {a: {b: 'c', d: 'e'}}), {});
-    assert.deepEqual(glob(['!a.*'], {a: {b: 'c', d: 'e'}}), {a: {}});
-    assert.deepEqual(glob(['!a.b.[g-l]'], fixture), {
+    assert.deepEqual(glob(['*', '!a.*'], {a: {b: 'c', d: 'e'}}), {a: {}});
+    assert.deepEqual(glob(['*', '!a.b.[g-l]'], fixture), {
       a: {
         b: {
           c: 'd',
@@ -42,17 +42,14 @@ describe('glob', function() {
         i: 'j'
       }
     });
-    assert.deepEqual(glob('!a.b.c', fixture), {
-      a: {
-        b: {
-          e: 'f',
-          g: 'h',
-          i: {j: 'k'},
-          l: {g: 'k'}
-        },
-        i: 'j'
-      }
-    });
+  });
+
+  it('should match properties using multiple negation patterns:', function() {
+    var obj = {a: 'a', b: 'b', c: 'c', d: 'd'};
+
+    assert.deepEqual(glob(['*', '!a', '!b', '!c'], obj), {d: 'd'});
+    assert.deepEqual(glob(['*', '!a', '!c', '!d'], obj), {b: 'b'});
+    assert.deepEqual(glob(['*', '!a', '!b', '!c', '!d'], obj), {});
   });
 
   it('should match properties using braces:', function() {
