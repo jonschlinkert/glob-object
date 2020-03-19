@@ -24,7 +24,7 @@
     "clone-deep": "^0.3.0",
     "get-value": "^2.0.6",
     "micromatch": "^3.0.3",
-    "set-value": "^1.0.0",
+    "set-value": "^3.0.1",
     "stringify-keys": "^0.3.0",
     "unset-value": "^1.0.0"
   },
